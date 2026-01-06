@@ -40,6 +40,7 @@ private:
         return d;
     }
 
+public:
     /**
      * @brief Helper to validate date format "YYYY-MM-DD".
      */
@@ -64,7 +65,6 @@ private:
         return true;
     }
 
-public:
     /**
      * @brief Default Constructor.
      */

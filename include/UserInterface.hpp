@@ -2,7 +2,6 @@
 
 #include "VehicleManager.hpp"
 #include <iostream>
-
 #include <string>
 
 namespace bk {
@@ -141,6 +140,51 @@ private:
     }
 
     /**
+     * @brief Helper function to get valid date string.
+     * @param prompt Text to display.
+     * @return Validated date string (YYYY-MM-DD).
+     */
+    std::string getValidDate(const std::string& prompt) {
+        std::string date;
+        while (true) {
+            std::cout << prompt;
+            std::getline(std::cin, date);
+            if (Rental::isValidDate(date)) {
+                return date;
+            } else {
+                std::cout << "Invalid date format or value. Please use YYYY-MM-DD.\n";
+            }
+        }
+    }
+
+    /**
+     * @brief Helper function to get valid NIP input.
+     * @param prompt Text to display.
+     * @return Validated NIP string (10 digits).
+     */
+    std::string getValidNIP(const std::string& prompt) {
+        std::string nip;
+        while (true) {
+            std::cout << prompt;
+            std::getline(std::cin, nip);
+
+            bool allDigits = !nip.empty(); // Ensure not empty starting point
+            for (char c : nip) {
+                if (!isdigit(c)) {
+                    allDigits = false;
+                    break;
+                }
+            }
+
+            if (nip.length() == 10 && allDigits) {
+                return nip;
+            } else {
+                std::cout << "Invalid NIP. It must consist of exactly 10 digits.\n";
+            }
+        }
+    }
+
+    /**
      * @brief Displays the main application menu.
      */
     void printMenu() {
@@ -236,7 +280,7 @@ private:
      * @brief UI handling for adding a new customer.
      */
     void addCustomerUI() {
-        int type = getValidInt("Select Type: 1.Private 2.Business: ");
+        int type = getValidInt("Select Type:   1.Private    2.Business: ");
 
         if (type < 1 || type > 2) {
             std::cout << "Invalid customer type selected.\n";
@@ -244,7 +288,11 @@ private:
         }
 
         std::string name, address; 
-        name = getValidString("Name and surname: ");
+        if (type == 1) {
+            name = getValidString("Name and Surname: ");
+        } else {
+            name = getValidString("Company Name: ");
+        }
         address = getValidString("Address (City, street, house number): ");
 
         try {
@@ -255,7 +303,7 @@ private:
                 vm.addCustomer(new PrivateCustomer(name, address, idCard));
             } else if (type == 2) {
                 std::string nip;
-                nip = getValidString("NIP: ");
+                nip = getValidNIP("NIP: ");
                 // BusinessCustomer(name, addr, nip) - ID will be nip
                 vm.addCustomer(new BusinessCustomer(name, address, nip));
             } else {
@@ -421,8 +469,8 @@ public:
                         std::string reg, id, start, end;
                         reg = getValidString("Vehicle Reg: ");
                         id = getValidString("Customer ID: ");
-                        start = getValidString("Start (YYYY-MM-DD): ");
-                        end = getValidString("End (YYYY-MM-DD): ");
+                        start = getValidDate("Start (YYYY-MM-DD): ");
+                        end = getValidDate("End (YYYY-MM-DD): ");
                         vm.rentVehicle(reg, id, start, end);
                         break;
                     }

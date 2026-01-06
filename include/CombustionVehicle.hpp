@@ -117,6 +117,9 @@ public:
      * @param type New fuel type.
      */
     void setFuelType(FuelType type) {
+        if (!(type == FuelType::Gasoline || type == FuelType::Diesel)) {
+            throw std::invalid_argument("Invalid fuel type.");
+        }
         fuelType = type;
     }
 

@@ -97,7 +97,7 @@ public:
             }
         }
 
-        auto it = std::remove_if(vehicles.begin(), vehicles.end(),
+        auto i = std::remove_if(vehicles.begin(), vehicles.end(),
             [&regNumber](Vehicle* v) {
                 if (v->getRegNumber() == regNumber) {
                     delete v; // Free memory
@@ -106,8 +106,8 @@ public:
                 return false;
             });
         
-        if (it != vehicles.end()) {
-            vehicles.erase(it, vehicles.end());
+        if (i != vehicles.end()) {
+            vehicles.erase(i, vehicles.end());
         } else {
             throw std::invalid_argument("Vehicle not found.");
         }
@@ -265,7 +265,7 @@ public:
             }
         }
 
-        auto it = std::remove_if(customers.begin(), customers.end(),
+        auto i = std::remove_if(customers.begin(), customers.end(),
             [&id](Customer* c) {
                 if (c->getId() == id) {
                     delete c; // Free memory
@@ -274,8 +274,8 @@ public:
                 return false;
             });
 
-        if (it != customers.end()) {
-            customers.erase(it, customers.end());
+        if (i != customers.end()) {
+            customers.erase(i, customers.end());
         } else {
             throw std::invalid_argument("Customer not found.");
         }
@@ -354,7 +354,7 @@ public:
             }
         }
 
-        // Create new rental (Raw pointer managed by vector)
+        // Create new rental
         Rental* rental = new Rental(v, c, startDate, endDate);
         rentals.push_back(rental);
         if (showMessage) std::cout << "Vehicle rented successfully.\n";

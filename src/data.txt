@@ -1,5 +1,5 @@
 21
-CombustionCar;Toyota;Yaris;WA 12345;120;1496;5.5;0;1;15000;5
+CombustionCar;Toyota;Yaris;WA 12345;120;1496;5.5;0;1;16000;5
 CombustionCar;Skoda;Octavia;KR 54321;150;1968;5;1;1;45000;5
 CombustionCar;Volkswagen;Golf;PO 98765;140;1498;6;0;1;30000;5
 CombustionCar;Ford;Focus;GD 11223;140;1500;6.2;1;1;55000;5
@@ -31,8 +31,8 @@ BusinessCustomer;Trans-Logistics;Lodz, ul. Magazynowa 5;7393456789
 BusinessCustomer;IT Solutions;Krakow, ul. Lubicz 3;6762345678
 BusinessCustomer;Auto-Czesci;Katowice, ul. Przemyslowa 8;6342345678
 BusinessCustomer;Meble-System;Szczecin, ul. Mieszka I 10;8522345678
-2
-WA 12345;ABC 123456;2025-06-01;2025-06-07
-KR 54321;5252345678;2025-07-10;2025-07-20
 1
+KR 54321;5252345678;2025-07-10;2025-07-20
+2
 Tesla Model 3 (WE 99887);Anna Nowak (XYZ 987654);2025-08-05;2025-08-12;2800
+Toyota Yaris (WA 12345);Jan Kowalski (ABC 123456);2025-06-01;2025-06-07;720
