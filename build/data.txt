@@ -1,0 +1,38 @@
+21
+CombustionCar;Toyota;Yaris;WA 12345;120;1496;5.5;0;1;15000;5
+CombustionCar;Skoda;Octavia;KR 54321;150;1968;5;1;1;45000;5
+CombustionCar;Volkswagen;Golf;PO 98765;140;1498;6;0;1;30000;5
+CombustionCar;Ford;Focus;GD 11223;140;1500;6.2;1;1;55000;5
+CombustionCar;Hyundai;i30;WR 33445;110;1350;6.5;0;1;22000;5
+CombustionCar;Kia;Ceed;DW 55667;130;1350;6.4;0;1;25000;5
+ElectricCar;Tesla;Model 3;WE 99887;400;75;1;5000.1;4
+ElectricCar;Nissan;Leaf;GSP 4455;250;40;1;12000;5
+ElectricCar;BMW;i3;CT 66778;300;42.2;1;8000;4
+ElectricCar;Renault;Zoe;CB 11223;200;52;1;15000;5
+ElectricCar;Audi;e-tron;NO 99887;500;95;1;3000;5
+Truck;Volvo;FH;ZS 12121;800;12777;25;1;2;150000;20000
+Truck;Scania;R450;RZ 34343;750;12740;24.5;1;2;200000;19000
+Truck;Mercedes;Actros;LU 56565;850;12809;26;1;2;120000;21000
+Truck;MAN;TGX;OL 78787;780;12419;25.5;1;2;180000;19500
+Truck;DAF;XF;BI 90909;760;12902;24.8;1;2;220000;20500
+Motorcycle;Yamaha;MT-07;KRA 1A23;200;689;4.2;0;0;12000
+Motorcycle;Honda;CBR650R;WOT 4B56;220;649;4.5;0;0;8000
+Motorcycle;Kawasaki;Nitro;DWR 7C89;250;399;4.6;0;0;5000
+Motorcycle;Suzuki;SV650;SZY 2E34;190;645;4;0;0;15000
+CombustionCar;Toyota;Yaris;REG 01;200;1200;6.6;0;1;2000;3
+10
+PrivateCustomer;Jan Kowalski;Warszawa, ul. Zlota 5;ABC 123456
+PrivateCustomer;Anna Nowak;Krakow, ul. Dluga 10;XYZ 987654
+PrivateCustomer;Piotr Wisniewski;Gdansk, ul. Morska 2;DEF 456789
+PrivateCustomer;Katarzyna Wojcik;Wroclaw, ul. Rynek 50;GHI 112233
+PrivateCustomer;Michal Kaminski;Poznan, ul. Polwiejska 12;JKL 445566
+BusinessCustomer;Pol-Bud Sp. z o.o.;Warszawa, ul. Prosta 20;5252345678
+BusinessCustomer;Trans-Logistics;Lodz, ul. Magazynowa 5;7393456789
+BusinessCustomer;IT Solutions;Krakow, ul. Lubicz 3;6762345678
+BusinessCustomer;Auto-Czesci;Katowice, ul. Przemyslowa 8;6342345678
+BusinessCustomer;Meble-System;Szczecin, ul. Mieszka I 10;8522345678
+2
+WA 12345;ABC 123456;2025-06-01;2025-06-07
+KR 54321;5252345678;2025-07-10;2025-07-20
+1
+Tesla Model 3 (WE 99887);Anna Nowak (XYZ 987654);2025-08-05;2025-08-12;2800
