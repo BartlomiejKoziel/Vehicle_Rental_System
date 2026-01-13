@@ -27,7 +27,7 @@ private:
         while (true) {
             std::cout << prompt;
             if (std::cin >> value) {
-                std::cin.ignore(10000, '\n'); // Clear trailing newline
+                std::cin.ignore(10000, '\n'); 
                 if (value >= min) {
                     return value;
                 } else {
@@ -35,8 +35,8 @@ private:
                 }
             } else {
                 std::cout << "Invalid input. Please enter a valid integer number.\n";
-                std::cin.clear(); // Clear error flag
-                std::cin.ignore(10000, '\n'); // Discard invalid input
+                std::cin.clear(); 
+                std::cin.ignore(10000, '\n'); 
             }
         }
     }
@@ -52,7 +52,7 @@ private:
         while (true) {
             std::cout << prompt;
             if (std::cin >> value) {
-                std::cin.ignore(10000, '\n'); // Clear trailing newline
+                std::cin.ignore(10000, '\n'); 
                 if (value >= min) {
                     return value;
                 } else {
@@ -60,8 +60,8 @@ private:
                 }
             } else {
                 std::cout << "Invalid input. Please enter a valid decimal number.\n";
-                std::cin.clear(); // Clear error flag
-                std::cin.ignore(10000, '\n'); // Discard invalid input
+                std::cin.clear(); 
+                std::cin.ignore(10000, '\n'); 
             }
         }
     }
@@ -76,7 +76,7 @@ private:
         while (true) {
             std::cout << prompt;
             if (std::cin >> value) {
-                std::cin.ignore(10000, '\n'); // Clear trailing newline
+                std::cin.ignore(10000, '\n'); 
                 if (value == 'y' || value == 'Y') return true;
                 if (value == 'n' || value == 'N') return false;
                 std::cout << "Invalid input. Please enter 'y' or 'n'.\n";

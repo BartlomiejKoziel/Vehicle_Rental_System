@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/bartl/OneDrive/Pulpit/JPO/Vehicle_base/build",
-  "command": "C:/msys64/ucrt64/bin/g++.exe  @CMakeFiles/VehicleRentalSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/VehicleRentalSystem.dir/src/main.cpp.obj -c C:/Users/bartl/OneDrive/Pulpit/JPO/Vehicle_base/src/main.cpp",
-  "file": "C:/Users/bartl/OneDrive/Pulpit/JPO/Vehicle_base/src/main.cpp",
-  "output": "CMakeFiles/VehicleRentalSystem.dir/src/main.cpp.obj"
-}
-]

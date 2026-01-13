@@ -52,14 +52,12 @@ public:
             if (!isdigit(date[i])) return false;
         }
         
-        // Basic range checks
         int year = std::stoi(date.substr(0, 4));
         int month = std::stoi(date.substr(5, 2));
         int day = std::stoi(date.substr(8, 2));
         
         if (month < 1 || month > 12) return false;
         
-        // Detailed day check using getDaysInMonth
         if (day < 1 || day > getDaysInMonth(month, year)) return false;
 
         return true;
@@ -87,7 +85,6 @@ public:
         if (!isValidDate(start)) throw std::invalid_argument("Start date must be in format YYYY-MM-DD.");
         if (!isValidDate(end)) throw std::invalid_argument("End date must be in format YYYY-MM-DD.");
 
-        // Lexicographical comparison works for YYYY-MM-DD
         if (end <= startDate) {
             throw std::invalid_argument("End date must be later than start date.");
         }
