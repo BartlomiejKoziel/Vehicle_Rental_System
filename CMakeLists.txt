@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Include directories
 include_directories(include)
 
-# Source files
+# Source files 
 set(SOURCES
     src/main.cpp
 )
