@@ -10,25 +10,23 @@
 
 #include <vector>
 #include <string>
-#include <algorithm>
+#include <algorithm> // to edit vectors
 #include <iostream>
-#include <fstream>
-#include <sstream>
+#include <fstream> // to save to file
+#include <sstream> 
 
 namespace bk {
 
 /**
  * @class VehicleManager
  * @brief Central class for managing Vehicles, Customers, and Rentals.
- * @note Follows Strict Rule: Uses RAW POINTERS for all object management.
- *       Responsible for manual memory allocation and deallocation.
  */
 class VehicleManager {
 private:
-    std::vector<Vehicle*> vehicles;   ///< Container for all vehicles (owns memory)
-    std::vector<Customer*> customers; ///< Container for all customers (owns memory)
-    std::vector<Rental*> rentals;     ///< Container for active rentals (owns memory)
-    std::vector<std::string> rentalHistory; ///< Archive of past rentals
+    std::vector<Vehicle*> vehicles;   // Container for all vehicles
+    std::vector<Customer*> customers; // Container for all customers
+    std::vector<Rental*> rentals;     // Container for active rentals
+    std::vector<std::string> rentalHistory; // Archive of past rentals
 
     /**
      * @brief Helper to check if a vehicle registration number is unique.
@@ -58,7 +56,6 @@ public:
 
     /**
      * @brief Destructor.
-     * CRITICAL: Manually deletes all managed objects to prevent memory leaks.
      */
     ~VehicleManager() {
         for (auto* r : rentals) delete r;
@@ -88,7 +85,6 @@ public:
 
     /**
      * @brief Remove a vehicle by registration number.
-     * @note Also deletes the object from memory.
      */
     void removeVehicle(const std::string& regNumber) {
         for (const auto* r : rentals) {
@@ -256,7 +252,6 @@ public:
 
     /**
      * @brief Remove a customer by ID.
-     * @note Also deletes the object from memory.
      */
     void removeCustomer(const std::string& id) {
         for (const auto* r : rentals) {
@@ -390,8 +385,6 @@ public:
            << r->getCustomer()->getName() << " (" << r->getCustomer()->getId() << ");"
            << r->getStartDate() << ";" << r->getEndDate() << ";" << cost;
         rentalHistory.push_back(ss.str());
-        
-        // Cleanup
         delete r;
         rentals.erase(it);
 
@@ -513,7 +506,6 @@ public:
     /**
      * @brief Load global state from file.
      * @param filename Path to file.
-     * @note Clears current state before loading.
      */
     void loadFromFile(const std::string& filename) {
         std::ifstream file(filename);

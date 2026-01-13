@@ -56,7 +56,6 @@ public:
 
     /**
      * @brief Calculate rent cost.
-     *        Formula includes base cost and cargo capacity factor.
      * @param days Number of rental days.
      * @return Total cost: Base cost + (Cargo capacity * 0.1 * Days)
      */

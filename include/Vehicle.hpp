@@ -19,7 +19,7 @@ public:
 
     /**
      * @enum LicenceCategory
-     * @brief Represents the required driving licence category (A1, A2, B, C).
+     * @brief Represents the required driving licence category (A, B, C).
      */
     enum class LicenceCategory {
         A,
@@ -28,12 +28,12 @@ public:
     };
 
 protected:
-    std::string regNumber;      ///< Registration number (Unique ID)
-    std::string brand;          ///< Vehicle Brand
-    std::string model;          ///< Vehicle Model
-    double mileage;             ///< Current mileage in km
-    double baseCost;            ///< Base daily rental cost in zl
-    LicenceCategory licenceCat; ///< Required licence category
+    std::string regNumber;      /// Registration number (Unique ID)
+    std::string brand;          /// Vehicle Brand
+    std::string model;          /// Vehicle Model
+    double mileage;             /// Current mileage in km
+    double baseCost;            /// Base daily rental cost in zl
+    LicenceCategory licenceCat; /// Required licence category
 
 public:
     /**

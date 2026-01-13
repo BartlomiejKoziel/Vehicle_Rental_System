@@ -12,7 +12,7 @@ namespace bk {
  */
 class UserInterface {
 private:
-    VehicleManager& vm; ///< Reference to the vehicle manager (Model)
+    VehicleManager& vm;
 
     // --- Helper Functions ---
 
@@ -168,7 +168,7 @@ private:
             std::cout << prompt;
             std::getline(std::cin, nip);
 
-            bool allDigits = !nip.empty(); // Ensure not empty starting point
+            bool allDigits = !nip.empty();
             for (char c : nip) {
                 if (!isdigit(c)) {
                     allDigits = false;
@@ -380,7 +380,7 @@ private:
 public:
     /**
      * @brief Constructor.
-     * @param vehicleManager Reference to the logic logic controller.
+     * @param vehicleManager Reference to the logic controller.
      */
     explicit UserInterface(VehicleManager& vehicleManager) : vm(vehicleManager) {}
 

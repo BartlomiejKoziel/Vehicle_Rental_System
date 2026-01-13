@@ -12,7 +12,7 @@ namespace bk {
  */
 class ElectricCar : public ElectricVehicle {
 protected:
-    int doors; ///< Number of doors
+    int doors; // Number of doors
 
 public:
     /**

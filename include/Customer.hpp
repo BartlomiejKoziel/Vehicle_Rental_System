@@ -120,11 +120,11 @@ public:
 
 /**
  * @class BusinessCustomer
- * @brief Represents a business customer with a NIP (Tax ID).
+ * @brief Represents a business customer with a NIP.
  */
 class BusinessCustomer : public Customer {
 private:
-    std::string nip; ///< Tax Identification Number (NIP)
+    std::string nip;
 
 public:
     /**
@@ -137,7 +137,7 @@ public:
      * @param name Company Name.
      * @param addr Address.
      * @param nipVal NIP number (used as System ID).
-     * @throws std::invalid_argument If validation fails.
+     * @throws std::invalid_argument if validation fails.
      */
     BusinessCustomer(const std::string& name, const std::string& addr, const std::string& nipVal)
         : Customer(nipVal, name, addr), nip(nipVal)
@@ -154,7 +154,6 @@ public:
     }
 
     CustomerType getType() const override {return CustomerType::Business;}
-
     std::string getNip() const { return nip; }
 };
 

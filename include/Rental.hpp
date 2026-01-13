@@ -11,7 +11,6 @@ namespace bk {
 /**
  * @class Rental
  * @brief Represents a rental transaction linking a Vehicle and a Customer.
- * @note Uses raw pointers. Manual date input.
  */
 class Rental {
 private:
@@ -92,7 +91,6 @@ public:
 
     /**
      * @brief End the rental (update end date).
-     * @note Strictly, end date is set in constructor now, but this allows extension.
      */
     void setEndDate(const std::string& end) {
          if (!isValidDate(end)) throw std::invalid_argument("End date must be in format YYYY-MM-DD.");
@@ -126,7 +124,6 @@ public:
 
     /**
      * @brief Calculate total days since year 0 to the given date.
-     * simple loop-based algorithm for readability.
      */
     int countTotalDays(const std::string& date) const {
         int y = std::stoi(date.substr(0, 4));
@@ -150,17 +147,13 @@ public:
 
     /**
      * @brief Calculate number of days between start and end date.
-     * @return Number of days (inclusive of start day, minimum 1).
+     * @return Number of days.
      */
     int getRentalDays() const {
         if (startDate.empty() || endDate.empty()) return 0;
-        
-        // Calculate difference simply by subtracting total days from year 0
         int startTotal = countTotalDays(startDate);
         int endTotal = countTotalDays(endDate);
-        
         int days = endTotal - startTotal;
-        
         return (days < 1) ? 1 : days; 
     }
 
